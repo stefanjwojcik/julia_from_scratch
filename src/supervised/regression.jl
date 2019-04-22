@@ -269,9 +269,12 @@ function predict(model::LeastAngleRegression,
 end
 
 
+function cost_linear_noreg(w::Vector)
+    return mean_squared_error(y_global, X_global*w)
+end
 
-function cost_linear(w::Vector)
-    return add_reg(mean_squared_error(y_global, X_global*w),w)
+function cost_linear(w)
+    return add_reg(mean_squared_error(y_global, X_global*w),w, model)
 end
 
 function cost_logistic(X, y, w::Vector,model)
@@ -295,9 +298,8 @@ function test_LinearRegression(;reg = "l1")
     train!(model,X_train, y_train)
     predictions = predict(model,X_test)
     print("regression mse: ", mean_squared_error(y_test, predictions))
-    PyPlot.scatter(X_test, y_test, color = "black")
-    PyPlot.scatter(X_test, predictions, color = "green")
-    legend(loc="upper right",fancybox="true")
+    Gadfly.plot(layer(x=X_test, y=y_test, Geom.point),
+                layer(x=X_test, y=predictions, Geom.line))
 end
 
 function test_LogisticRegression(; reg = "l2")

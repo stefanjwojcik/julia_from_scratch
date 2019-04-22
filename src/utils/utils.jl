@@ -216,7 +216,7 @@ end
 
 function make_reg(;n_samples = 200,
                    n_features = 10)
-    X, y = dat.make_regression(n_samples=n_samples, n_features=n_features, n_targets=1, noise=0.05,
+    X, y = dat.make_regression(n_samples=n_samples, n_features=n_features, n_targets=1, noise=40,
                            random_state=1111, bias=0.5)
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8,
                                                         rand_seed=1111)

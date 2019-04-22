@@ -1,18 +1,16 @@
 __precompile__()
-module JuliaScratch
+module jfs
 
-using LinearAlgebra
-using Gadfly
-using DataFrames
-using ForwardDiff
-using Statistics
-using Distributions
-using PyCall
-using PyPlot
-using DataStructures
-using Distances
-using Clustering
-using Random
+using
+    LinearAlgebra,
+    Plots,
+    Gadfly,
+    ForwardDiff,
+    Statistics,
+    Distributions,
+    PyCall,
+    Distances,
+    Random
 
 @pyimport sklearn.datasets as dat
 
@@ -39,14 +37,15 @@ export
     classification_error,
     accuracy,
     mean_absolute_error,
+    mean_squared_error,
     squared_error,
     squared_log_error,
     make_iris
 
 #Supervised_learning
-include("supervised/regression.jl")
+include("src/supervised/regression.jl")
 
 #Utility functions
-include("utils/utils.jl")
+include("src/utils/utils.jl")
 
 end
