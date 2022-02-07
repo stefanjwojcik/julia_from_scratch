@@ -17,7 +17,7 @@ But julia supports an extensive arrange of characters, allowing you to define ma
 Not only that, but functions can contain such mathematical symbols. 
 
 ```julia 
-β(X, Y) = inv(X'*X)*X'*Y
+β(X, Y) = inv(X'X)X'Y
 n, p = 1000, 5
 X = rand(n, p)
 randbeta = rand(p)
