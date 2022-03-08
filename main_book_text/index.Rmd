@@ -1,5 +1,5 @@
 --- 
-title: "Computational Nuggets"
+title: "Computational Social Science at Scale"
 author: "Stefan Wojcik"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,24 +9,26 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/comp-nuggets
-description: "This is a book about computational social science for journalists, nonprofit researchers, or graduate students in recently-turned-quantitative social science programs."
+description: "This is a book about computational social science for early-career researchers, journalists, nonprofitteers, and graduate students in computational social science programs."
 ---
 
 # Prerequisites {#prereqs}
 
-I am, by all accounts, an unlikely evangelist for Data Science. I wasn't a math nerd in high school or college, nor did I have any idea how to code. I was much more interested in Social Sciences, specifically Political Science. 
+You don't need to be a math or science nerd to code. Like anything, you just need practice. You will benefit from a background in Statistics or Computer Science to deeply understand this book, but it is not a requirement. You will get a lot out of this book without them. 
 
-But I grew to understand the power of code to probe an increasingly digital world. While web sites like Google, Facebook, and Twitter provide incredible real-time access to information that aid us in understanding changes in society, they don't really make that data available at scale. Unless you're already a programmer and have special access, it's hard to bulk download data from the most popular web sites. 
+I grew to understand the power of programming to deconstruct an increasingly digital world. Web sites like Google, Facebook, and Twitter provide incredible real-time access to information that aid us in understanding changes in society. But they don't really make that data available easily - at least not in large quantities. It's frankly hard to bulk download data from most web sites. In some cases it's also illegal or unethical, so just keep that in mind :). 
 
 ## Not a Drop to Drink
 
-Data are almost literally everywhere, but they are usually not made for you to collect or understand. 
+Data are literally everywhere, but they are usually not made for you to collect or understand. 
+
+This book is about making data more accessible to you. You may be interested in writing a program to systematically download certain tables from a web site because they tell you something about the results of a sports game or election. Or you may be interested in all of the text on specific web pages because they tell you something about how people talk to each other. 
 
 That is why you need to learn to code. 
 
 ## Flavors of Data Science 
 
-Not all data science is the same, and for good reason. Huge variation in what it means to be a data scientist. 
+Not all data science is the same, and for good reason. Huge variation is what it means to be a data scientist. 
 
 ## Who this book is for
 

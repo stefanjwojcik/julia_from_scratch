@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.20
+# v0.12.7
 
 using Markdown
 using InteractiveUtils
@@ -46,7 +46,7 @@ function rank_approx(M, k)
     
     M = U[:, 1:k] * Diagonal(S[1:k]) * V[:, 1:k]'
     
-    M = min.(max.(M, 0.0), 1.)
+    #M = min.(max.(M, 0.0), 1.)
 end
 
 # ╔═╡ 11b6d268-6e62-11eb-2508-933baa12d392
@@ -64,8 +64,8 @@ n = 100
 # ╔═╡ a3268534-6e62-11eb-10ec-7b7a1203ae00
 colorview(  RGB, 
             rank_approx(channels[1,:,:], k1),
-            rank_approx(channels[2,:,:], k2),
-            rank_approx(channels[3,:,:], k3)
+            rank_approx(channels[2,:,:], k1),
+            rank_approx(channels[3,:,:], k1)
 )
 
 # ╔═╡ af1516a8-6e62-11eb-314a-5ba685a6668e
