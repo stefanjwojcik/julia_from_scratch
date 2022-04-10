@@ -15,6 +15,8 @@ Y = onehotbatch(labels, 0:9) |> gpu
 
 m = Chain(
   Dense(28^2, 32, relu),
+  Dense(32, 60),
+  Dense(60, 32),
   Dense(32, 10),
   Flux.softmax) |> gpu
 
@@ -22,11 +24,11 @@ loss(x, y) = crossentropy(m(x), y)
 
 accuracy(x, y) = mean(onecold(m(x)) .== onecold(y))
 
-dataset = repeated((X, Y), 200)
+dataset = repeated((X, Y), 2000)
 evalcb = () -> @show(loss(X, Y))
 opt = ADAM()
 
-Flux.train!(loss, params(m), dataset, opt, cb = throttle(evalcb, 10))
+Flux.train!(loss, params(m), dataset, opt, cb = throttle(evalcb, .5))
 
 accuracy(X, Y)
 
