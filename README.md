@@ -25,9 +25,15 @@ The goal is to teach elegant customized programming that scales.
 - Plotting w Gadfly
 
 # Chapter 4: Statistical Significance 
-- mean, variance, differences in means, t-tests, correlation, causal inference
+- Basic understanding of statistics, distributions
+- Concepts: distributions, mean, variance, differences in means, t-tests, correlation, causal inference
 
-# Chapter 5: 
+# Chapter 5: Non-Neural ML Algorithms
+- Machine learning models and their forms 
 
-this
+# Chapter 6: Neural ML Algorithms
+- Perceptron
+- DNN
+- RNN
+- CNN
 
